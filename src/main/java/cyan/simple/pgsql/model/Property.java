@@ -41,7 +41,7 @@ public class Property implements Serializable {
         }
     }
 
-    public static String toPropertiesJson(List<Property> properties) {
+    public static String toPropertiesJson(Collection<Property> properties) {
         if (GeneralUtils.isNotEmpty(properties)) {
             Map<String, Map<String, Object>> propertiesMap = properties.stream().filter(Objects::nonNull)
                     .collect(Collectors.toMap(Property::getName,
